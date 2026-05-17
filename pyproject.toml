@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartfile-tui"
+version = "1.0.0"
+description = "🚀 AI驱动的智能终端文件管理器 - AI-Powered Intelligent Terminal File Manager"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "SmartFile Team", email = "smartfile@example.com"}
+]
+keywords = ["file-manager", "tui", "terminal", "ai", "textual", "async"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Filesystems",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "textual>=0.52.0",
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "aiofiles>=23.0.0",
+    "pydantic>=2.0.0",
+    "platformdirs>=4.0.0",
+]
+
+[project.optional-dependencies]
+ai = [
+    "openai>=1.0.0",
+    "anthropic>=0.18.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+smartfile = "smartfile_tui.main:main"
+sft = "smartfile_tui.main:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/smartfile-tui"
+Documentation = "https://github.com/gitstq/smartfile-tui#readme"
+Repository = "https://github.com/gitstq/smartfile-tui"
+Issues = "https://github.com/gitstq/smartfile-tui/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["smartfile_tui*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
