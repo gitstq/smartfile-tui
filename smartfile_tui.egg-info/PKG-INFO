@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: smartfile-tui
+Version: 1.0.0
+Summary: 🚀 AI驱动的智能终端文件管理器 - AI-Powered Intelligent Terminal File Manager
+Author-email: SmartFile Team <smartfile@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/gitstq/smartfile-tui
+Project-URL: Documentation, https://github.com/gitstq/smartfile-tui#readme
+Project-URL: Repository, https://github.com/gitstq/smartfile-tui
+Project-URL: Issues, https://github.com/gitstq/smartfile-tui/issues
+Keywords: file-manager,tui,terminal,ai,textual,async
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: textual>=0.52.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: aiofiles>=23.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: platformdirs>=4.0.0
+Provides-Extra: ai
+Requires-Dist: openai>=1.0.0; extra == "ai"
+Requires-Dist: anthropic>=0.18.0; extra == "ai"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: license-file
