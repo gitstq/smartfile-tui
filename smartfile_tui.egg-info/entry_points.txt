@@ -1,0 +1,3 @@
+[console_scripts]
+sft = smartfile_tui.main:main
+smartfile = smartfile_tui.main:main
